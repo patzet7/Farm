@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+
+
+
+class Animal
+{
+    public:
+    //attributes
+    std::string species;
+    std::string name;
+    int age;
+
+    //methods
+    void add_animal()
+    {
+        std::cout << "Adding a new animal to the base: " << std::endl;
+        std::cout << "Enter species: " << std::endl;
+        std::cin >> species;
+        std::cout << "Enter name: " << std::endl;
+        std::cin >> name;
+        std::cout << "Enter age: " << std::endl;
+        std::cin >> age;
+    }
+
+    void gimmeVoice()
+    {
+        if(species == "Cat" || "cat") std::cout << name << " years " << age << ": Mieow!" << std::endl;
+        else if(species == "Goat" || "goat") std::cout << name << " years " << age << ": Meeeeee!" << std::endl;
+        else if(species == "Cow" || "cow") std::cout << name << " years " << age << ": Muuuuuu!" << std::endl;
+        else std::cout << "Species not known, is it UFO?";
+
+    }
+
+};
+
+int main()
+{
+    Animal a1; //creating an object
+    a1.add_animal(); //method
+    a1.gimmeVoice();
+
+    Animal a2; //second object
+    a2.add_animal();
+    a2.gimmeVoice();
+
+    return 0;
+}
